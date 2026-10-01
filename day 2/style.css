@@ -1,0 +1,233 @@
+/* 1. Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+  background-color: #312e81;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+  border-bottom: 4px solid #6366f1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 6px 0 16px;
+}
+
+/* 3. Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+/* 4. Centre main content */
+main {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* White card sections */
+section {
+  background-color: #ffffff;
+  color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+}
+
+section h2 {
+  color: #312e81;
+  margin-top: 0;
+}
+
+/* 5. Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  background-color: #eef2ff;
+  border: 1px solid #c7d2fe;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* 6. Shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e0e7ff;
+  color: #312e81;
+}
+
+/* 7. Feedback form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #6366f1;
+  border-color: #6366f1;
+}
+
+/* 8. Buttons */
+button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3730a3;
+  transform: translateY(-1px);
+}
+
+/* Keep the note form working nicely */
+#note-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* 9. Notes list */
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+#notes-list li {
+  background-color: #eef2ff;
+  border-left: 4px solid #4f46e5;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* 10. Footer */
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 16px;
+}
+
+/* 11. Small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  main {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+
+  #note-form {
+    flex-direction: column;
+  }
+
+  #note-input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
