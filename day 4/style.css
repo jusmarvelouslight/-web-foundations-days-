@@ -1,0 +1,168 @@
+
+:root {
+  --page-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --muted-color: #64748b;
+  --border-color: #cbd5e1;
+  --accent-color: #4f46e5;
+  --button-hover: #3730a3;
+  --warning-color: #ea580c;
+  --over-color: #dc2626;
+}
+
+body.dark {
+  --page-bg: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #e2e8f0;
+  --muted-color: #94a3b8;
+  --border-color: #475569;
+  --accent-color: #818cf8;
+  --button-hover: #6366f1;
+  --warning-color: #fb923c;
+  --over-color: #f87171;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.container {
+  width: min(100% - 32px, 700px);
+  margin: 32px auto;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+header p,
+footer,
+.hint {
+  color: var(--muted-color);
+}
+
+.note-card {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.note-card h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.counts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.counts p {
+  margin: 0;
+  font-weight: bold;
+}
+
+#char-count.warning {
+  color: var(--warning-color);
+}
+
+#char-count.over {
+  color: var(--over-color);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 3px;
+}
+
+.hint {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 20px, 700px);
+    margin: 20px auto;
+  }
+
+  .note-card {
+    padding: 16px;
+  }
+
+  .actions button {
+    flex: 1;
+  }
+}

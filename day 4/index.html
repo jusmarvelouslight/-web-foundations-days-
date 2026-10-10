@@ -1,0 +1,49 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - Live Character Counter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>QuickNotes</h1>
+      <p>Write a note and keep track of your words.</p>
+    </header>
+
+    <section class="note-card" aria-labelledby="note-heading">
+      <h2 id="note-heading">Your note</h2>
+
+      <label for="note-text">Note text</label>
+      <textarea
+        id="note-text"
+        rows="8"
+        placeholder="Start typing your note..."
+      ></textarea>
+
+      <div class="counts" aria-live="polite">
+        <p id="char-count">0 / 200 characters</p>
+        <p id="word-count">0 words</p>
+      </div>
+
+      <div class="actions">
+        <button id="clear-btn" type="button">Clear</button>
+        <button id="theme-toggle" type="button">Dark mode</button>
+      </div>
+
+      <p class="hint">
+        Your draft is saved in this browser.
+        Press Escape while typing to clear it.
+      </p>
+    </section>
+
+    <footer>
+      <p>Day 4 Web Foundations assignment</p>
+    </footer>
+  </main>
+</body>
+</html>
