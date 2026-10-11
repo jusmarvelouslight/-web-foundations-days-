@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 - Fetching and Filtering Users</title>
+  <script src="users.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Day 5 - Users Directory</h1>
+      <p>Load users from an API and filter them by name.</p>
+    </header>
+
+    <section>
+      <button id="load-users" type="button">Load Users</button>
+
+      <p>
+        <label for="filter-input">Filter users by name</label>
+        <input
+          type="text"
+          id="filter-input"
+          placeholder="Enter a name..."
+        >
+      </p>
+
+      <p id="status" aria-live="polite">Click Load Users to begin.</p>
+
+      <ul id="users-list"></ul>
+    </section>
+  </main>
+</body>
+</html>
